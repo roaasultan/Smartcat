@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="شركة سمارت كات - رائدة في تقديم الحلول الرقمية المتكاملة في المملكة العربية السعودية">
+    <meta name="keywords" content="حلول رقمية, سمارت كات, ERP, ذكاء اصطناعي, تطبيقات جوال, سحابة, سعودية">
+    <meta name="author" content="SmartCat">
+    <title>سمارت كات | الحلول الرقمية المتكاملة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        :root {
+            --primary-red: #e83c41;
+            --primary-blue: #212b54;
+            --dark-blue: #1a223f;
+            --light-blue: #2d3a7a;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --black: #161a1d;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--black);
+            overflow-x: hidden;
+            background-color: var(--off-white);
+            line-height: 1.6;
+        }
+        
+        /* أنيميشن مخصص */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(232, 60, 65, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(232, 60, 65, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(232, 60, 65, 0); }
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-pulse {
+            animation: pulse 3s ease infinite;
+        }
+        
+        /* التصميم العام */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 70px;
+            height: 4px;
+            background: var(--primary-red);
+            border-radius: 2px;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* شريط التنقل المحسن */
+        .navbar {
+            background-color: rgba(33, 43, 84, 0.9);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar.scrolled {
+            padding: 0.8rem 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background-color: rgba(26, 34, 63, 0.96) !important;
+            backdrop-filter: blur(12px);
+        }
+        
+        .logo {
+            color: var(--white);
+            font-size: 1.8rem;
+            font-weight: 900;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-left: 10px;
+        }
+        
+        .logo:hover {
+            color: var(--primary-red);
+            transform: scale(1.05);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            right: 0;
+            background-color: var(--primary-red);
+            transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+            border-radius: 3px;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-red);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* القسم الرئيسي المحسن */
+        .hero {
+            background: linear-gradient(135deg, rgba(33, 43, 84, 0.9), rgba(26, 34, 63, 0.95)), 
+                        url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            min-height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(33, 43, 84, 0.9) 0%, rgba(26, 34, 63, 0.7) 100%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 2;
+            transform-style: preserve-3d;
+        }
+        
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transform: translateZ(50px);
+        }
+        
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .hero-bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgZmlsbD0iI2U4M2M0MSIgY3g9IjIwIiBjeT0iMjAiIHI9IjEiLz48L2c+PC9zdmc+');
+            opacity: 0.3;
+            z-index: 1;
+        }
+        
+        /* تأثيرات النص */
+        .text-gradient {
+            background: linear-gradient(90deg, var(--primary-red), var(--primary-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .text-stroke {
+            -webkit-text-stroke: 1px var(--primary-red);
+            color: transparent;
+        }
+        
+        /* الأزرار المحسنة */
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-red);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(232, 60, 65, 0.3);
+            text-decoration: none;
+            z-index: 1;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        
+        .btn:hover {
+            background-color: #d13237;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(232, 60, 65, 0.4);
+        }
+        
+        .btn:hover::before {
+            opacity: 1;
+        }
+        
+        .btn:active {
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--white);
+            box-shadow: none;
+            margin-right: 1rem;
+        }
+        
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+        
+        .btn-lg {
+            padding: 1.2rem 3rem;
+            font-size: 1.2rem;
+        }
+        
+        .btn-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* البطاقات المحسنة */
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            position: relative;
+            height: 100%;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(232, 60, 65, 0.1) 0%, rgba(33, 43, 84, 0.1) 100%);
+            opacity: 0;
+            transition: all 0.4s ease;
+            z-index: -1;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card:hover::before {
+            opacity: 1;
+        }
+        
+        .card-icon {
+            font-size: 3rem;
+            color: var(--primary-red);
+            margin-bottom: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .card:hover .card-icon {
+            transform: scale(1.2) rotate(5deg);
+            color: var(--primary-blue);
+        }
+        
+        /* الأقسام */
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title h2 {
+            display: inline-block;
+        }
+        
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .features {
+            background-color: var(--white);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 15px;
+            transition: all 0.5s;
+        }
+        
+        .feature-card:hover {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: white;
+        }
+        
+        .feature-card:hover p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .feature-card:hover h3 {
+            color: white;
+        }
+        
+        .feature-card:hover .card-icon {
+            color: white;
+        }
+        
+        /* خدماتنا */
+        .services {
+            background-color: var(--off-white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: var(--primary-red);
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .services::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .services-container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-card {
+            padding: 2.5rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(232, 60, 65, 0.1) 0%, rgba(33, 43, 84, 0.1) 100%);
+            opacity: 0;
+            transition: all 0.4s ease;
+            z-index: -1;
+        }
+        
+        .service-card:hover .service-card-bg {
+            opacity: 1;
+        }
+        
+        .service-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card .btn {
+            align-self: flex-start;
+            margin-top: auto;
+            padding: 0.8rem 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        /* لماذا نحن */
+        .why-us {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .why-us::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgZmlsbD0iI2U4M2M0MSIgY3g9IjIwIiBjeT0iMjAiIHI9IjEiLz48L2c+PC9zdmc+');
+            opacity: 0.1;
+        }
+        
+        .why-us h2 {
+            color: white;
+        }
+        
+        .why-us h2:after {
+            background: white;
+        }
+        
+        .why-us p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        /* العملاء */
+        .clients {
+            background-color: var(--white);
+        }
+        
+        .client-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .client-logo {
+            max-width: 150px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+        
+        .client-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        /* اتصل بنا */
+        .contact {
+            background: linear-gradient(rgba(33, 43, 84, 0.9), rgba(33, 43, 84, 0.9)), 
+                        url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+        
+        .contact h2 {
+            color: white;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--primary-red);
+        }
+        
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* تأثيرات الصور */
+        .img-hover-zoom {
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        .img-hover-zoom img {
+            transition: all 0.5s ease;
+        }
+        
+        .img-hover-zoom:hover img {
+            transform: scale(1.1) rotate(1deg);
+        }
+        
+        .img-glow {
+            filter: drop-shadow(0 0 10px rgba(232, 60, 65, 0.3));
+            transition: all 0.3s ease;
+        }
+        
+        .img-glow:hover {
+            filter: drop-shadow(0 0 20px rgba(232, 60, 65, 0.5));
+        }
+        
+        /* التذييل */
+        footer {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+            position: relative;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .footer-links h3, .footer-contact h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h3:after, .footer-contact h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-red);
+            border-radius: 3px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-red);
+            transform: translateX(-5px);
+        }
+        
+        .footer-contact p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-contact i {
+            margin-left: 10px;
+            color: var(--primary-red);
+            font-size: 1.2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-red);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+        
+        /* تأثيرات الظهور */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
+        
+        /* Swiper */
+        .swiper {
+            width: 100%;
+            padding: 50px 0;
+        }
+        
+        .swiper-slide {
+            width: 300px;
+            height: auto;
+        }
+        
+        .swiper-pagination-bullet {
+            background: white;
+            opacity: 0.5;
+            width: 12px;
+            height: 12px;
+            transition: all 0.3s;
+        }
+        
+        .swiper-pagination-bullet-active {
+            background: var(--primary-red);
+            opacity: 1;
+            transform: scale(1.2);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.2rem; }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background: var(--dark-blue);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 3rem;
+                transition: all 0.5s ease;
+                gap: 2rem;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                height: 90vh;
+                min-height: 700px;
+            }
+            
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 70px 0;
+            }
+            
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            h3 { font-size: 1.5rem; }
+            
+            .hero {
+                height: 80vh;
+                min-height: 600px;
+                padding-top: 70px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            .btn-group {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .btn-outline {
+                margin-right: 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                height: 70vh;
+                min-height: 500px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .stat-item {
+                padding: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* تحسينات للأجهزة التي تفضل تقليل الحركة */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* زر تبديل اللغة */
+        .language-switcher {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 999;
+        }
+
+        .language-btn {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .language-btn:hover {
+            background-color: var(--primary-red);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* عناصر مخفية للغة الإنجليزية */
+        [data-lang="en"] {
+            display: none;
+        }
+
+        /* تعديلات للغة الإنجليزية */
+        [lang="en"] {
+            direction: ltr;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        [lang="en"] .logo {
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        [lang="en"] h2:after {
+            right: auto;
+            left: 0;
+        }
+
+        [lang="en"] .footer-links h3:after,
+        [lang="en"] .footer-contact h3:after {
+            right: auto;
+            left: 0;
+        }
+
+        [lang="en"] .footer-links a:hover {
+            transform: translateX(5px);
+        }
+
+        [lang="en"] .nav-links a::after {
+            right: auto;
+            left: 0;
+        }
+
+        [lang="en"] .btn-outline {
+            margin-right: 0;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- زر تبديل اللغة -->
+    <div class="language-switcher">
+        <button id="languageBtn" class="language-btn">
+            <i class="fas fa-language"></i>
+            <span>English</span>
+        </button>
+    </div>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span>SMARTCAT</span>
+            </a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" data-lang="ar">الرئيسية</a>
+                <a href="index.html" data-lang="en">Home</a>
+                <a href="about.html" data-lang="ar">من نحن</a>
+                <a href="about.html" data-lang="en">About Us</a>
+                <a href="services.html" data-lang="ar">الخدمات</a>
+                <a href="services.html" data-lang="en">Services</a>
+                <a href="industries.html" data-lang="ar">القطاعات</a>
+                <a href="industries.html" data-lang="en">Industries</a>
+                <a href="contact.html" data-lang="ar">اتصل بنا</a>
+                <a href="contact.html" data-lang="en">Contact Us</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section class="hero">
+        <div class="hero-bg-pattern"></div>
+        <div class="container">
+            <div class="hero-content animate__animated animate__fadeIn">
+                <h1 class="animate__animated animate__fadeInDown text-gradient" data-lang="ar">تمكين الاقتصاد الرقمي السعودي</h1>
+                <h1 class="animate__animated animate__fadeInDown text-gradient" data-lang="en">Empowering Saudi Digital Economy</h1>
+                <p class="animate__animated animate__fadeInUp animate__delay-1s" data-lang="ar">10+ سنوات من الخبرة في تقديم الحلول الرقمية المتكاملة والمبتكرة</p>
+                <p class="animate__animated animate__fadeInUp animate__delay-1s" data-lang="en">10+ years of experience in providing integrated and innovative digital solutions</p>
+                <div class="btn-group animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="#contact" class="btn btn-lg btn-pulse" data-lang="ar">اتصل بنا</a>
+                    <a href="#contact" class="btn btn-lg btn-pulse" data-lang="en">Contact Us</a>
+                    <a href="#services" class="btn btn-outline btn-lg" data-lang="ar">استكشف الخدمات</a>
+                    <a href="#services" class="btn btn-outline btn-lg" data-lang="en">Explore Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- المميزات -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="text-gradient" data-lang="ar">من نحن</h2>
+                <h2 class="text-gradient" data-lang="en">About Us</h2>
+                <p data-lang="ar">شركة سعودية رائدة في مجال الحلول الرقمية</p>
+                <p data-lang="en">A leading Saudi company in digital solutions</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 data-lang="ar">من نحن</h3>
+                    <h3 data-lang="en">Who We Are</h3>
+                    <p data-lang="ar">شركة سعودية تأسست بخبرة تزيد عن 10 سنوات في مجال الحلول الرقمية، وتهدف إلى المساهمة في تحقيق أثر إيجابي في الاقتصاد الرقمي السعودي</p>
+                    <p data-lang="en">A Saudi company with over 10 years of experience in digital solutions, aiming to contribute positively to the Saudi digital economy</p>
+                </div>
+                
+                <div class="feature-card card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 data-lang="ar">رؤيتنا</h3>
+                    <h3 data-lang="en">Our Vision</h3>
+                    <p data-lang="ar">المساهمة في الاقتصاد الرقمي السعودي من خلال الابتكار والاستفادة من البيانات</p>
+                    <p data-lang="en">Contributing to the Saudi digital economy through innovation and data utilization</p>
+                </div>
+                
+                <div class="feature-card card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 data-lang="ar">مهمتنا</h3>
+                    <h3 data-lang="en">Our Mission</h3>
+                    <p data-lang="ar">تبني التقنيات المتطورة التي تُحدث تأثيرًا إيجابيًا على مستهدفات الابتكارية للسعودية وتمكين نمو الأعمال من خلال البيانات</p>
+                    <p data-lang="en">Adopting advanced technologies that positively impact Saudi Arabia's innovation goals and enabling business growth through data</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- القيم -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="text-gradient" data-lang="ar">قيمنا</h2>
+                <h2 class="text-gradient" data-lang="en">Our Values</h2>
+            </div>
+            
+            <div class="features-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 data-lang="ar">الاستطلاع</h3>
+                    <h3 data-lang="en">Exploration</h3>
+                    <p data-lang="ar">نبحث عن أفضل الحلول المخصصة لتحقيق أهداف عملائنا</p>
+                    <p data-lang="en">We search for the best customized solutions to achieve our clients' goals</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 data-lang="ar">التطوير</h3>
+                    <h3 data-lang="en">Development</h3>
+                    <p data-lang="ar">تقييمات مستمرة لتقديم حلول أكثر فعالية</p>
+                    <p data-lang="en">Continuous evaluations to provide more effective solutions</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 data-lang="ar">الابتكار</h3>
+                    <h3 data-lang="en">Innovation</h3>
+                    <p data-lang="ar">نحن ندفع حدود الإبداع لتقديم حلول مبتكرة</p>
+                    <p data-lang="en">We push the boundaries of creativity to provide innovative solutions</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-lang="ar">النمو</h3>
+                    <h3 data-lang="en">Growth</h3>
+                    <p data-lang="ar">نلتزم بتحقيق تأثير نمو حقيقي في كل مشروع ننفذه</p>
+                    <p data-lang="en">We are committed to achieving real growth impact in every project we implement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الخدمات -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="text-gradient" data-lang="ar">خدماتنا</h2>
+                <h2 class="text-gradient" data-lang="en">Our Services</h2>
+                <p data-lang="ar">نقدم مجموعة متكاملة من الحلول الرقمية المتقدمة</p>
+                <p data-lang="en">We provide a comprehensive suite of advanced digital solutions</p>
+            </div>
+            
+            <div class="swiper services-slider" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="service-card card">
+                            <div class="card-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h3 data-lang="ar">أنظمة تخطيط الموارد المؤسسية</h3>
+                            <h3 data-lang="en">ERP Systems</h3>
+                            <p data-lang="ar">حلول متكاملة لأنظمة تخطيط الموارد المؤسسية (ERP) تشمل أوراكل، أودو، دايناميكس 365 وواجهات التطبيقات البرمجية (APIs)</p>
+                            <p data-lang="en">Integrated ERP solutions including Oracle, Odoo, Dynamics 365 and APIs</p>
+                            <a href="#" class="btn btn-pulse" data-lang="ar">المزيد</a>
+                            <a href="#" class="btn btn-pulse" data-lang="en">More</a>
+                            <div class="service-card-bg"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="service-card card">
+                            <div class="card-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3 data-lang="ar">أتمتة العمليات الروبوتية</h3>
+                            <h3 data-lang="en">Robotic Process Automation</h3>
+                            <p data-lang="ar">حلول RPA تشمل يو آي باث، وورك فيوجن، مايكروسوفت باور أوتوميت، أوتوميشن أنيويير وأتمتة التحليلات التنبؤية</p>
+                            <p data-lang="en">RPA solutions including UI Path, Work Fusion, Microsoft Power Automate, Automation Anywhere and predictive analytics automation</p>
+                            <a href="#" class="btn btn-pulse" data-lang="ar">المزيد</a>
+                            <a href="#" class="btn btn-pulse" data-lang="en">More</a>
+                            <div class="service-card-bg"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="service-card card">
+                            <div class="card-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 data-lang="ar">الذكاء الاصطناعي والتعلم الآلي</h3>
+                            <h3 data-lang="en">AI & Machine Learning</h3>
+                            <p data-lang="ar">تطوير منتجات الذكاء الاصطناعي، حلول إنترنت الأشياء، معالجة اللغات الطبيعية (NLP) وحلول برمجية مخصصة</p>
+                            <p data-lang="en">AI product development, IoT solutions, Natural Language Processing (NLP) and custom software solutions</p>
+                            <a href="#" class="btn btn-pulse" data-lang="ar">المزيد</a>
+                            <a href="#" class="btn btn-pulse" data-lang="en">More</a>
+                            <div class="service-card-bg"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="service-card card">
+                            <div class="card-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 data-lang="ar">إدارة البيانات والحلول السحابية</h3>
+                            <h3 data-lang="en">Data Management & Cloud Solutions</h3>
+                            <p data-lang="ar">أدوات تحليل البيانات، البيانات الضخمة باستخدام Hadoop أو Spark أو SQL، النماذج التنبؤية، ذكاء الأعمال وتحليلات البيانات الضخمة</p>
+                            <p data-lang="en">Data analysis tools, big data using Hadoop or Spark or SQL, predictive models, business intelligence and big data analytics</p>
+                            <a href="#" class="btn btn-pulse" data-lang="ar">المزيد</a>
+                            <a href="#" class="btn btn-pulse" data-lang="en">More</a>
+                            <div class="service-card-bg"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="service-card card">
+                            <div class="card-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3 data-lang="ar">تطوير التطبيقات</h3>
+                            <h3 data-lang="en">App Development</h3>
+                            <p data-lang="ar">تطبيقات الويب، تطبيقات الجوال، مراجعة الأكواد وتطوير حلول مخصصة</p>
+                            <p data-lang="en">Web applications, mobile applications, code review and custom solutions development</p>
+                            <a href="#" class="btn btn-pulse" data-lang="ar">المزيد</a>
+                            <a href="#" class="btn btn-pulse" data-lang="en">More</a>
+                            <div class="service-card-bg"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- القطاعات -->
+    <section class="clients">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="text-gradient" data-lang="ar">القطاعات التي نخدمها</h2>
+                <h2 class="text-gradient" data-lang="en">Industries We Serve</h2>
+            </div>
+            
+            <div class="features-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 data-lang="ar">الرعاية الصحية</h3>
+                    <h3 data-lang="en">Healthcare</h3>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <h3 data-lang="ar">الترفيه</h3>
+                    <h3 data-lang="en">Entertainment</h3>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-business-time"></i>
+                    </div>
+                    <h3 data-lang="ar">المال والأعمال</h3>
+                    <h3 data-lang="en">Finance & Business</h3>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 data-lang="ar">التجزئة</h3>
+                    <h3 data-lang="en">Retail</h3>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3 data-lang="ar">الرياضة</h3>
+                    <h3 data-lang="en">Sports</h3>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 data-lang="ar">الخدمات اللوجستية</h3>
+                    <h3 data-lang="en">Logistics</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التقنيات -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="text-gradient" data-lang="ar">تقنيات التطوير</h2>
+                <h2 class="text-gradient" data-lang="en">Development Technologies</h2>
+            </div>
+            
+            <div class="features-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 data-lang="ar">لغات البرمجة</h3>
+                    <h3 data-lang="en">Programming Languages</h3>
+                    <p data-lang="ar">Python, JavaScript, Java, PHP</p>
+                    <p data-lang="en">Python, JavaScript, Java, PHP</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3 data-lang="ar">أُطُر العمل</h3>
+                    <h3 data-lang="en">Frameworks</h3>
+                    <p data-lang="ar">React, Angular, Django</p>
+                    <p data-lang="en">React, Angular, Django</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 data-lang="ar">المنصات السحابية</h3>
+                    <h3 data-lang="en">Cloud Platforms</h3>
+                    <p data-lang="ar">Amazon, Google Cloud, Microsoft Azure</p>
+                    <p data-lang="en">Amazon, Google Cloud, Microsoft Azure</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 data-lang="ar">أدوات التحليل</h3>
+                    <h3 data-lang="en">Analysis Tools</h3>
+                    <p data-lang="ar">Tableau, Power BI, Google Analytics</p>
+                    <p data-lang="en">Tableau, Power BI, Google Analytics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- لماذا نحن -->
+    <section class="why-us">
+        <div class="why-us-bg-animation"></div>
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="text-gradient" data-lang="ar">لماذا تختار سمارت كات؟</h2>
+                <h2 class="text-gradient" data-lang="en">Why Choose SmartCat?</h2>
+                <p data-lang="ar">نحن نفتخر بقدرتنا على تقديم حلول مخصصة لا تلبي توقعات عملائنا فحسب، بل تتجاوزها</p>
+                <p data-lang="en">We pride ourselves on delivering customized solutions that not only meet but exceed our clients' expectations</p>
+            </div>
+            
+            <div class="features-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 data-lang="ar">الخبرة الشاملة</h3>
+                    <h3 data-lang="en">Comprehensive Expertise</h3>
+                    <p data-lang="ar">سجل حافل بمشاريع ناجحة في البيانات الضخمة والذكاء الاصطناعي حول العالم</p>
+                    <p data-lang="en">A proven track record of successful projects in big data and AI worldwide</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-lang="ar">القيمة الملموسة</h3>
+                    <h3 data-lang="en">Tangible Value</h3>
+                    <p data-lang="ar">فريق متخصص يضمن حلولًا دقيقة وفعالة تحقق النتائج المرجوة</p>
+                    <p data-lang="en">A specialized team that ensures accurate and effective solutions that deliver desired results</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 data-lang="ar">مرونة التعاون</h3>
+                    <h3 data-lang="en">Flexible Collaboration</h3>
+                    <p data-lang="ar">نقدم نماذج تعاون مرنة وأسعارًا تناسب احتياجات مشروعك</p>
+                    <p data-lang="en">We offer flexible collaboration models and pricing that suits your project needs</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 data-lang="ar">جودة عالية</h3>
+                    <h3 data-lang="en">High Quality</h3>
+                    <p data-lang="ar">نركز على تقديم نتائج ملموسة عبر حلول مخصصة تتحدى التعقيدات</p>
+                    <p data-lang="en">We focus on delivering tangible results through customized solutions that challenge complexities</p>
+                </div>
+            </div>
+            
+            <div class="stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-item">
+                    <div class="stat-number animate-pulse" data-count="50">0</div>
+                    <div class="stat-label" data-lang="ar">عميل راضٍ</div>
+                    <div class="stat-label" data-lang="en">Satisfied Clients</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number animate-pulse" data-count="120">0</div>
+                    <div class="stat-label" data-lang="ar">مشروع ناجح</div>
+                    <div class="stat-label" data-lang="en">Successful Projects</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number animate-pulse" data-count="15">0</div>
+                    <div class="stat-label" data-lang="ar">خبير تقني</div>
+                    <div class="stat-label" data-lang="en">Tech Experts</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number animate-pulse" data-count="10">0</div>
+                    <div class="stat-label" data-lang="ar">سنوات خبرة</div>
+                    <div class="stat-label" data-lang="en">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فريقنا -->
+    <section class="clients">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="text-gradient" data-lang="ar">فريقنا</h2>
+                <h2 class="text-gradient" data-lang="en">Our Team</h2>
+                <p data-lang="ar">يتكون فريقنا من خبراء متعددي التخصصات يعملون معًا لتقديم حلول مبتكرة تحقق أهداف عملائنا</p>
+                <p data-lang="en">Our team consists of multidisciplinary experts working together to deliver innovative solutions that achieve our clients' goals</p>
+            </div>
+            
+            <div class="features-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 data-lang="ar">المدراء التنفيذيون</h3>
+                    <h3 data-lang="en">Executive Managers</h3>
+                    <p data-lang="ar">يقودون الفريق برؤية استراتيجية واضحة</p>
+                    <p data-lang="en">Leading the team with a clear strategic vision</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 data-lang="ar">مديرو المشاريع</h3>
+                    <h3 data-lang="en">Project Managers</h3>
+                    <p data-lang="ar">ينسقون على كافة جوانب المشروع لضمان تحقيق الأهداف</p>
+                    <p data-lang="en">Coordinating all aspects of the project to ensure goals are achieved</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 data-lang="ar">المطورون</h3>
+                    <h3 data-lang="en">Developers</h3>
+                    <p data-lang="ar">خبراء في بناء حلول تقنية تدعم نمو الأعمال</p>
+                    <p data-lang="en">Experts in building technical solutions that support business growth</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 data-lang="ar">علماء البيانات</h3>
+                    <h3 data-lang="en">Data Scientists</h3>
+                    <p data-lang="ar">خبراء يستخرجون رؤى قابلة للتنفيذ من البيانات</p>
+                    <p data-lang="en">Experts who extract actionable insights from data</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- منهجيتنا -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="text-gradient" data-lang="ar">منهجيتنا</h2>
+                <h2 class="text-gradient" data-lang="en">Our Methodology</h2>
+            </div>
+            
+            <div class="features-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3 data-lang="ar">التركيز على العميل</h3>
+                    <h3 data-lang="en">Client-Centric</h3>
+                    <p data-lang="ar">نؤمن بالمنهجية التي ترتكز على العميل ونعمل عن كثب مع عملائنا لفهم تحدياتهم وأهدافهم</p>
+                    <p data-lang="en">We believe in a client-centric methodology and work closely with our clients to understand their challenges and goals</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3 data-lang="ar">حلول مخصصة</h3>
+                    <h3 data-lang="en">Customized Solutions</h3>
+                    <p data-lang="ar">نصمم حلولًا مخصصة تلبي احتياجاتهم الخاصة بهم</p>
+                    <p data-lang="en">We design customized solutions that meet their specific needs</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 data-lang="ar">الإبداع والخبرة</h3>
+                    <h3 data-lang="en">Creativity & Expertise</h3>
+                    <p data-lang="ar">يجمع فريقنا بين الإبداع والخبرة التقنية لتقديم حلول مبتكرة</p>
+                    <p data-lang="en">Our team combines creativity and technical expertise to deliver innovative solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- رحلتنا -->
+    <section class="clients">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="text-gradient" data-lang="ar">رحلتنا معك</h2>
+                <h2 class="text-gradient" data-lang="en">Our Journey With You</h2>
+            </div>
+            
+            <div class="features-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-chess"></i>
+                    </div>
+                    <h3 data-lang="ar">تطوير استراتيجية</h3>
+                    <h3 data-lang="en">Strategy Development</h3>
+                    <p data-lang="ar">تطوير استراتيجية متكاملة تتماشى مع أهداف شركتك</p>
+                    <p data-lang="en">Developing an integrated strategy aligned with your company's goals</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 data-lang="ar">خطة عمل</h3>
+                    <h3 data-lang="en">Action Plan</h3>
+                    <p data-lang="ar">وضع خطة عمل مبنية على أفضل الممارسات للتوسع</p>
+                    <p data-lang="en">Creating an action plan based on best practices for expansion</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 data-lang="ar">منصات متعددة</h3>
+                    <h3 data-lang="en">Multiple Platforms</h3>
+                    <p data-lang="ar">استخدام منصات متعددة لتعزيز القيمة وتحسين النتائج</p>
+                    <p data-lang="en">Utilizing multiple platforms to enhance value and improve results</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3 data-lang="ar">تجربة مستخدم</h3>
+                    <h3 data-lang="en">User Experience</h3>
+                    <p data-lang="ar">تصميم تجارب مستخدمين سلسة عبر كافة المنصات الرقمية</p>
+                    <p data-lang="en">Designing smooth user experiences across all digital platforms</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-lang="ar">الاستفادة من البيانات</h3>
+                    <h3 data-lang="en">Data Utilization</h3>
+                    <p data-lang="ar">الاستفادة من البيانات لإنشاء تجارب مخصصة وأهداف دقيقة</p>
+                    <p data-lang="en">Leveraging data to create customized experiences and precise goals</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 data-lang="ar">التحسين المستمر</h3>
+                    <h3 data-lang="en">Continuous Improvement</h3>
+                    <p data-lang="ar">التحسين المستمر للإستراتيجيات لضمان النجاح طويل المدى</p>
+                    <p data-lang="en">Continuous improvement of strategies to ensure long-term success</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="card-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 data-lang="ar">الذكاء الاصطناعي</h3>
+                    <h3 data-lang="en">Artificial Intelligence</h3>
+                    <p data-lang="ar">توظيف الذكاء الاصطناعي والتعلم الآلي لنمذجة حلول مستدامة</p>
+                    <p data-lang="en">Employing AI and machine learning to model sustainable solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- اتصل بنا -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="text-gradient" data-lang="ar">اتصل بنا</h2>
+                <h2 class="text-gradient" data-lang="en">Contact Us</h2>
+                <p data-lang="ar">نحن هنا للإجابة على جميع استفساراتك وتقديم الحلول المناسبة لاحتياجاتك</p>
+                <p data-lang="en">We're here to answer all your inquiries and provide the right solutions for your needs</p>
+            </div>
+            
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="100">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="الاسم الكامل" data-lang="ar" required>
+                        <input type="text" class="form-control" placeholder="Full Name" data-lang="en" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="البريد الإلكتروني" data-lang="ar" required>
+                        <input type="email" class="form-control" placeholder="Email" data-lang="en" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" class="form-control" placeholder="رقم الهاتف" data-lang="ar">
+                        <input type="tel" class="form-control" placeholder="Phone Number" data-lang="en">
+                    </div>
+                    
+                    <div class="form-group">
+                        <select class="form-control" required>
+                            <option value="" disabled selected data-lang="ar">اختر الخدمة</option>
+                            <option value="" disabled selected data-lang="en">Select Service</option>
+                            <option value="erp" data-lang="ar">أنظمة ERP</option>
+                            <option value="erp" data-lang="en">ERP Systems</option>
+                            <option value="rpa" data-lang="ar">أتمتة العمليات الروبوتية</option>
+                            <option value="rpa" data-lang="en">Robotic Process Automation</option>
+                            <option value="ai" data-lang="ar">الذكاء الاصطناعي</option>
+                            <option value="ai" data-lang="en">Artificial Intelligence</option>
+                            <option value="data" data-lang="ar">إدارة البيانات</option>
+                            <option value="data" data-lang="en">Data Management</option>
+                            <option value="cloud" data-lang="ar">الحلول السحابية</option>
+                            <option value="cloud" data-lang="en">Cloud Solutions</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="الرسالة" data-lang="ar" required></textarea>
+                        <textarea class="form-control" placeholder="Message" data-lang="en" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-lg btn-pulse" data-lang="ar">إرسال الرسالة</button>
+                    <button type="submit" class="btn btn-lg btn-pulse" data-lang="en">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#" class="footer-logo">SMARTCAT</a>
+                    <p data-lang="ar">شركة رائدة في تقديم الحلول الرقمية المتكاملة التي تسهم في تحقيق التحول الرقمي للمؤسسات والشركات في المملكة العربية السعودية.</p>
+                    <p data-lang="en">A leading company in providing integrated digital solutions that contribute to the digital transformation of institutions and companies in Saudi Arabia.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
+                    <h3 data-lang="ar">روابط سريعة</h3>
+                    <h3 data-lang="en">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" data-lang="ar">الرئيسية</a></li>
+                        <li><a href="index.html" data-lang="en">Home</a></li>
+                        <li><a href="about.html" data-lang="ar">من نحن</a></li>
+                        <li><a href="about.html" data-lang="en">About Us</a></li>
+                        <li><a href="services.html" data-lang="ar">الخدمات</a></li>
+                        <li><a href="services.html" data-lang="en">Services</a></li>
+                        <li><a href="industries.html" data-lang="ar">القطاعات</a></li>
+                        <li><a href="industries.html" data-lang="en">Industries</a></li>
+                        <li><a href="contact.html" data-lang="ar">اتصل بنا</a></li>
+                        <li><a href="contact.html" data-lang="en">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="300">
+                    <h3 data-lang="ar">الخدمات</h3>
+                    <h3 data-lang="en">Services</h3>
+                    <ul>
+                        <li><a href="#" data-lang="ar">أنظمة ERP</a></li>
+                        <li><a href="#" data-lang="en">ERP Systems</a></li>
+                        <li><a href="#" data-lang="ar">أتمتة العمليات</a></li>
+                        <li><a href="#" data-lang="en">Process Automation</a></li>
+                        <li><a href="#" data-lang="ar">الذكاء الاصطناعي</a></li>
+                        <li><a href="#" data-lang="en">Artificial Intelligence</a></li>
+                        <li><a href="#" data-lang="ar">إدارة البيانات</a></li>
+                        <li><a href="#" data-lang="en">Data Management</a></li>
+                        <li><a href="#" data-lang="ar">الحلول السحابية</a></li>
+                        <li><a href="#" data-lang="en">Cloud Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact" data-aos="fade-up" data-aos-delay="400">
+                    <h3 data-lang="ar">معلومات الاتصال</h3>
+                    <h3 data-lang="en">Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> <span data-lang="ar">الرياض، المملكة العربية السعودية</span><span data-lang="en">Riyadh, Saudi Arabia</span></p>
+                    <p><i class="fas fa-phone"></i> +966 12 345 6789</p>
+                    <p><i class="fas fa-envelope"></i> info@smartcat.sa</p>
+                    <p><i class="fas fa-clock"></i> <span data-lang="ar">الأحد - الخميس: 8 ص - 5 م</span><span data-lang="en">Sun - Thu: 8 AM - 5 PM</span></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom" data-aos="fade-up" data-aos-delay="500">
+                <p data-lang="ar">&copy; 2023 سمارت كات. جميع الحقوق محفوظة.</p>
+                <p data-lang="en">&copy; 2023 SmartCat. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // تهيئة AOS للأنيميشن عند التمرير
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+
+        // شريط التنقل
+        const navbar = document.getElementById('navbar');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Swiper للخدمات
+        const servicesSwiper = new Swiper('.services-slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            loop: true,
+            centeredSlides: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+        
+        // تأثيرات GSAP
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // تأثيرات العوامة للبطاقات
+        const floatingCards = document.querySelectorAll('.feature-card, .service-card');
+        
+        floatingCards.forEach((card, index) => {
+            card.style.setProperty('--delay', index * 0.1 + 's');
+            
+            card.addEventListener('mousemove', (e) => {
+                const x = e.clientX - card.getBoundingClientRect().left;
+                const y = e.clientY - card.getBoundingClientRect().top;
+                
+                const centerX = card.offsetWidth / 2;
+                const centerY = card.offsetHeight / 2;
+                
+                const angleX = (y - centerY) / 20;
+                const angleY = (centerX - x) / 20;
+                
+                card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateY(-10px)`;
+                card.style.boxShadow = `${-angleY * 2}px ${angleX * 2}px 30px rgba(0, 0, 0, 0.2)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(-10px)';
+                card.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.1)';
+            });
+        });
+        
+        // عدادات الإحصاءات
+        const statNumbers = document.querySelectorAll('.stat-number');
+        
+        statNumbers.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-count'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+            
+            const updateCount = () => {
+                current += step;
+                if (current < target) {
+                    stat.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCount);
+                } else {
+                    stat.textContent = target;
+                }
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    updateCount();
+                    observer.unobserve(stat);
+                }
+            });
+            
+            observer.observe(stat);
+        });
+        
+        // تأثيرات GSAP للرأس
+        gsap.from(".hero-content h1", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            ease: 'power3.out'
+        });
+        
+        gsap.from(".hero-content p", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            delay: 0.3,
+            ease: 'power3.out'
+        });
+        
+        gsap.from(".btn-group", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            delay: 0.6,
+            ease: 'power3.out'
+        });
+        
+        // تحسين أداء GSAP
+        gsap.config({
+            force3D: true,
+            autoSleep: 60,
+            nullTargetWarn: false
+        });
+
+        // تبديل اللغة
+        const languageBtn = document.getElementById('languageBtn');
+        let currentLanguage = 'ar'; // اللغة الافتراضية
+        
+        // دالة تبديل اللغة
+        function toggleLanguage() {
+            if (currentLanguage === 'ar') {
+                // التبديل إلى الإنجليزية
+                document.querySelectorAll('[data-lang="ar"]').forEach(el => {
+                    el.style.display = 'none';
+                });
+                document.querySelectorAll('[data-lang="en"]').forEach(el => {
+                    el.style.display = 'block';
+                });
+                document.documentElement.lang = 'en';
+                document.documentElement.dir = 'ltr';
+                languageBtn.querySelector('span').textContent = 'العربية';
+                currentLanguage = 'en';
+            } else {
+                // التبديل إلى العربية
+                document.querySelectorAll('[data-lang="en"]').forEach(el => {
+                    el.style.display = 'none';
+                });
+                document.querySelectorAll('[data-lang="ar"]').forEach(el => {
+                    el.style.display = 'block';
+                });
+                document.documentElement.lang = 'ar';
+                document.documentElement.dir = 'rtl';
+                languageBtn.querySelector('span').textContent = 'English';
+                currentLanguage = 'ar';
+            }
+            
+            // حفظ اللغة المفضلة
+            localStorage.setItem('language', currentLanguage);
+        }
+        
+        // عند تحميل الصفحة، تحقق من اللغة المحفوظة
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLanguage = localStorage.getItem('language');
+            if (savedLanguage === 'en') {
+                toggleLanguage();
+            }
+            
+            // إضافة مستمع الحدث للزر
+            languageBtn.addEventListener('click', toggleLanguage);
+        });
+    </script>
+</body>
+</html>
